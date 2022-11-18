@@ -25,12 +25,13 @@ end
 
 return packer.startup(function(use)
     use 'wbthomason/packer.nvim' -- packer manages itself
-
     use 'nvim-lua/plenary.nvim' -- used by a lot of other plugins
-
     use {
         'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
+        run = function()
+            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            ts_update()
+        end,
     }
     use {
         'nvim-tree/nvim-tree.lua',
