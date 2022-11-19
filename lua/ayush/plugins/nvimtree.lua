@@ -3,12 +3,10 @@ vim.g.loaded_netrwPlugin = 1
 
 local setup, nvimtree = pcall(require, 'nvim-tree')
 if not setup then
-    print('NvimTree not found')
     return
 end
 
 nvimtree.setup({
-    --    hijack_cursor = true,
     diagnostics = {
         enable = true,
         show_on_dirs = true

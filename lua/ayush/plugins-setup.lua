@@ -53,8 +53,6 @@ return packer.startup(function(use)
 
     -- themes
     use "rebelot/kanagawa.nvim"
-    use 'marko-cerovac/material.nvim'
-    use 'Mofiqul/vscode.nvim'
     use 'bluz71/vim-nightfly-colors'
 
     if packer_bootstrap then

@@ -3,18 +3,12 @@ vim.g.mapleader = " "
 local keymap = vim.keymap
 
 -- general keymaps
-
 keymap.set("i", "jk", "<Esc>") -- exit insert mode
 
 keymap.set("n", "<leader>nh", ":nohl<CR>") -- no highlight
-keymap.set("n", "<leader>q", ":q<CR>") -- quit
-keymap.set("n", "<leader>w", ":w<CR>") -- save
-keymap.set("n", "<leader>wq", ":wq<CR>") -- save and quit
 keymap.set("n", "x", '"_x') -- delete without yanking
-keymap.set("n", "<S-l>", ":tabnext<CR>") -- next tab
-keymap.set("n", "<S-h>", ":tabprevious<CR>") -- previous tab
-
--- plugin keymaps
+keymap.set("n", "<S-l>", ":bnext<CR>") -- next tab
+keymap.set("n", "<S-h>", ":bprev<CR>") -- previous tab
 
 -- nvimtree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { silent = true }) -- toggle nvimtree

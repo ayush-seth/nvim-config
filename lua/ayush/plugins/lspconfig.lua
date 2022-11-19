@@ -1,6 +1,5 @@
 local lspconfig_status, lspconfig = pcall(require, 'lspconfig')
 if not lspconfig_status then
-    print "LSP Config not found"
     return
 end
 
@@ -21,7 +20,7 @@ local on_attach = function(_, bufnr)
     vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
     vim.keymap.set('n', '<leader>ca', function() vim.lsp.buf.code_action({ apply = true }) end, opts)
     vim.keymap.set('n', 'gr', ts.lsp_references, opts)
-    vim.keymap.set('n', '<leader>f', vim.lsp.buf.format, opts)
+    vim.keymap.set('n', '<leader>fm', vim.lsp.buf.format, opts)
     vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
     vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 end
