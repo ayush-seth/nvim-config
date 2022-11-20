@@ -31,7 +31,6 @@ opt.guifont = 'JetBrainsMono NF:h11'
 
 -- neovide settings
 g.neovide_hide_mouse_when_typing = true
-g.neovide_fullscren = true
 
 -- backspace
 opt.backspace = 'indent,eol,start'

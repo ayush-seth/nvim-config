@@ -25,19 +25,24 @@ local on_attach = function(_, bufnr)
     vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 end
 
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
 -- Typesript
 lspconfig.tsserver.setup({
-    on_attach = on_attach
+    on_attach = on_attach,
+    capabilities = capabilities
 })
 
 -- Tailwind
 lspconfig.tailwindcss.setup({
-    on_attach = on_attach
+    on_attach = on_attach,
+    capabilities = capabilities
 })
 
 -- Lua
 lspconfig.sumneko_lua.setup({
     on_attach = on_attach,
+    capabilities = capabilities,
     settings = {
         Lua = {
             runtime = {
