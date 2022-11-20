@@ -12,7 +12,8 @@ opt.expandtab = true
 opt.autoindent = true
 
 -- line wrapping
-opt.wrap = false
+opt.wrap = true
+opt.linebreak = true
 
 -- search settings
 opt.ignorecase = true
@@ -41,3 +42,17 @@ opt.clipboard = 'unnamedplus'
 -- split settings
 opt.splitbelow = true
 opt.splitright = true
+
+opt.undofile = true
+opt.timeoutlen = 300
+opt.updatetime = 300
+opt.numberwidth = 4
+opt.scrolloff = 8
+opt.sidescrolloff = 8
+
+-- flash yanked text for visual feedback
+vim.cmd [[
+    augroup highlighted_yank
+    autocmd!
+    au TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch",timeout=100}
+]]
