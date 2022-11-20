@@ -1,4 +1,5 @@
 local opt = vim.opt
+local g = vim.g
 
 -- line numbers
 opt.number = true
@@ -28,8 +29,8 @@ opt.showmode = false
 opt.guifont = 'JetBrainsMono NF:h11'
 
 -- neovide settings
-vim.g.neovide_hide_mouse_when_typing = false
-vim.g.neovide_fullscren = true
+g.neovide_hide_mouse_when_typing = true
+g.neovide_fullscren = true
 
 -- backspace
 opt.backspace = 'indent,eol,start'

@@ -33,7 +33,7 @@ ll.setup({
             {
                 "mode",
                 icon = "",
-                color = { gui = "bold,italic" }
+                color = { gui = "bold" }
             },
             {
                 "[[ ]]",
