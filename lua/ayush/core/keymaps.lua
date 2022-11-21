@@ -8,15 +8,17 @@ end
 
 vim.g.mapleader = " "
 
+-- general
 map("i", "jk", "<Esc>") -- exit insert mode
 
 map("n", "<leader>nh", ":nohl<CR>") -- no highlight
 map("n", "x", '"_x') -- delete without yanking
 map("n", "<S-l>", ":bnext<CR>") -- next tab
 map("n", "<S-h>", ":bprev<CR>") -- previous tab
-map("n", "<leader>rl", "<CMD>so %<CR>") -- reload config
 
-map("n", "<C-n>", ":NvimTreeToggle<CR>", { silent = true }) -- toggle nvimtree
+-- nvimtree
+map("n", "<leader>e", ":NvimTreeFocus<CR>") -- focus nvimtree
+map("n", "<C-n>", ":NvimTreeToggle<CR>") -- toggle nvimtree
 
 -- telescope
 map("n", "<leader>ff", ":Telescope find_files<CR>")
