@@ -40,31 +40,54 @@ return packer.startup(function(use)
     requires = { 'nvim-tree/nvim-web-devicons' },
     config = function() require("ayush.plugins.nvimtree") end
   }
+
   use {
     'nvim-telescope/telescope-fzf-native.nvim',
     run = 'make'
   }
+
   use {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.0',
-    requires = { 'nvim-lua/plenary.nvim' }
+    requires = { 'nvim-lua/plenary.nvim' },
+    config = function() require("ayush.plugins.telescope") end
   }
-  use 'nvim-lualine/lualine.nvim'
-  use 'williamboman/mason.nvim'
+
+  use {
+    'nvim-lualine/lualine.nvim',
+    config = function() require("ayush.plugins.lualine") end
+  }
+
+  use {
+    'williamboman/mason.nvim',
+    config = function() require("ayush.plugins.mason") end
+  }
+
   use 'williamboman/mason-lspconfig.nvim'
-  use 'neovim/nvim-lspconfig'
+
+  use {
+    'neovim/nvim-lspconfig',
+    config = function() require("ayush.plugins.lspconfig") end
+  }
+
   use 'onsails/lspkind.nvim'
 
-  use({ "L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*" })
+  use { "L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*" }
 
-  use 'hrsh7th/nvim-cmp'
+  use {
+    'hrsh7th/nvim-cmp',
+    config = function()
+      require("ayush.plugins.completion")
+    end
+  }
+
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-nvim-lua'
   use 'saadparwaiz1/cmp_luasnip'
 
-  use { 'glepnir/dashboard-nvim' }
+  use 'glepnir/dashboard-nvim'
   -- themes
   use "rebelot/kanagawa.nvim"
   use 'bluz71/vim-nightfly-colors'

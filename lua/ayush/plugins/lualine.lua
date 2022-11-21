@@ -1,8 +1,3 @@
-local ll_status, ll = pcall(require, "lualine")
-if not ll_status then
-  return
-end
-
 local split = function(inputstr, sep)
   if sep == nil then
     sep = "%s"
@@ -14,14 +9,13 @@ local split = function(inputstr, sep)
   return t
 end
 
-
 local getRoot = function()
   local cwd = vim.fn.getcwd()
   cwd = split(cwd, "/")
   return cwd[#cwd]
 end
 
-ll.setup({
+require("lualine").setup({
   extensions = { "nvim-tree" },
   options = {
     component_separators = "",
