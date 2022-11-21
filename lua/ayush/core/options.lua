@@ -6,8 +6,8 @@ opt.number = true
 opt.relativenumber = true
 
 -- tab settings
-opt.tabstop = 4
-opt.shiftwidth = 4
+opt.tabstop = 2
+opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
 
@@ -31,9 +31,6 @@ opt.guifont = 'JetBrainsMono NF:h11'
 
 -- neovide settings
 g.neovide_hide_mouse_when_typing = true
-
--- backspace
-opt.backspace = 'indent,eol,start'
 
 -- clipboard
 opt.clipboard = 'unnamedplus'
