@@ -1,4 +1,3 @@
-require('ayush.plugins.nvimtree')
 require('ayush.plugins.telescope')
 require('ayush.plugins.lualine')
 require('ayush.plugins.completion')

@@ -1,12 +1,7 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-local setup, nvimtree = pcall(require, 'nvim-tree')
-if not setup then
-  return
-end
-
-nvimtree.setup({
+require("nvim-tree").setup({
   diagnostics = {
     enable = true,
     show_on_dirs = true
@@ -26,5 +21,4 @@ nvimtree.setup({
     hide_root_folder = true,
     width = 40
   }
-
 })
